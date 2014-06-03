@@ -1,3 +1,5 @@
+'use strict';
+
 List = Backbone.Model.extend({
 
   initialize: function() {
