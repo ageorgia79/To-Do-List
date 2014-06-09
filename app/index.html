@@ -2,7 +2,7 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>To Do list</title>
+        <title>Andy's To-Do list</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="/favicon.ico">
@@ -29,16 +29,16 @@
             </div>
             <div class="header">
                 <input class="newItem" placeholder="Enter a task">
-                <div class="newTaskButton button">Submit</div>    
+                <div class="submitTaskButton button">Submit</div>    
             </div>   
             <div class="taskBox"></div>
         </div>
 
-        <script type="text/template" class="task-list-item">
-            <div class="messagecontainer">
+        <script type="text/template" class="todo-list">
+            <div class="taskcontainer">
                 <div class="taskName"><%= name %> </div>
                 <div class="save-button button">Save</div>
-                <span class="complete-button button">Complete</span>
+                <span class="done-button button">Done</span>
             </div>
             
         </script>

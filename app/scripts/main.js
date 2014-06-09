@@ -1,24 +1,24 @@
 "use script";
 
-// this defines the Backbone Model Constructor 
+
 var Task = Backbone.Model.extend({ 
     idAttribute: '_id'
 });
 
-//This defines the backbone Collection server
+
 var TaskCollection = Backbone.Collection.extend({
     model: Task,
     url: 'http://tiny-pizza-server.herokuapp.com/collections/test-users',
 });
  
-// this defines the Backbone View constructor
+
 var TaskView = Backbone.View.extend({
  
-    template: _.template($('.task-list-item').text()),
-    editTemplate: _.template($('.task-list-edit-item').text()),
+    template: _.template($('.todo-list').text()),
+    editTemplate: _.template($('.todo-list').text()),
  
     events: {
-        'click .complete-button'    : 'showEdit',
+        'click .done-button'    : 'showEdit',
         'click .save-button'        : 'saveChanges',
         'keydown input'             : 'checkForChanges'
  
@@ -36,13 +36,13 @@ var TaskView = Backbone.View.extend({
         this.$el.html(renderedTemplate);
     },
     
-    // this is for the complete button, which destroys the item
+    
     showEdit: function(){
        this.model.destroy();
        this.remove();
     },
     
-    // this is for the save button, which should save item to console
+    
     saveChanges: function(){
         var nameVal = this.$el.find('.taskName input').val();
         this.model.set('task', nameVal);
@@ -59,15 +59,15 @@ var TaskView = Backbone.View.extend({
 });
 
 
-//Create a new collection instance
+
 var addTask = new TaskCollection();
 console.log(addTask)
 
-// this fetches the addTask collection 
+
 var cool = addTask.fetch().done(function() {
-    // this for eaches over the model instnace arrays 
+
   addTask.each(function(task) {
-    // this creates a new task view
+    
     new TaskView({
       model: task
     });
@@ -77,7 +77,7 @@ var cool = addTask.fetch().done(function() {
 console.log(cool)
 
 // this gives functionality to the add new task button 
-$('.newTaskButton').click(function(){
+$('.submitTaskButton').click(function(){
     var inputVal = $('.newItem').val();
     // this adds the input value to the collection instance 
     var newUserInstance = addTask.add({name: inputVal})
