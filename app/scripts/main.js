@@ -76,34 +76,15 @@ var cool = addTask.fetch().done(function() {
 
 console.log(cool)
 
-// this gives functionality to the add new task button 
+
 $('.submitTaskButton').click(function(){
     var inputVal = $('.newItem').val();
-    // this adds the input value to the collection instance 
+     
     var newUserInstance = addTask.add({name: inputVal})
-    // this saves the input value to the server 
+    
     newUserInstance.save();
-    // this clears the value of the new item input 
+    
     $('.newItem').val('');
     new TaskView({model: newUserInstance});
 });
  
-// this renders 
-// var AppView = Backbone.View.extend({
- 
-//   initialize: function(){
-//     this.listenTo(coolUsers, 'add', function(task){
-//       new TaskView({model: task})
-//     })
-//   }
- 
-// });
- 
-// // create instances
- 
-// var coolUsers = new TaskCollection();
-// // console.log(coolUsers)
- 
-// var app = new AppView();
- 
-// coolUsers.fetch();
