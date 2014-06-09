@@ -2,70 +2,73 @@
 // endbower
 
 body {
-    background: #fafafa;
+    background: black;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
 
-.todolist {
-    width: 800px;
-    height: 500px;
-    margin: 0 auto;
-    border: 2px solid black;
-    
+.topheader {
+    color: white;
+    font-size: 60px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    text-align:center;
 }
 
-.todoitem {
-    width: 800px;
-    height: 75px;
-    border-bottom: 2px solid black;
-}
-
-.complete {
-    padding: 0px;
-    margin: 0 auto;
-    float: left;
-    width: 100px;
-    height: 50px;
-    margin-top: 12px
-}
-
-.add {
-    float: right;
-    width: 100px;
-    height: 25px;
-}
-
-.remove {
-    padding: 0px;
-    margin: 0 auto;
-    float: right;
-    width: 100px;
-    height: 25px;
-    margin-top: 12px;
-    position: relative;
-    bottom: 27px;
-}
-
-.addtodo {
-    height: 50px;
-    width: 580px;
-    position: relative;
-    left: 7px;
-    margin-top: 9px;
-    font-size: 20px;
-    text-align: center;
-
-}
-
-.todo {
+.newItem {
     width: 400px;
     height: 50px;
+    font-size: 20px;
+
+}
+
+.taskBox {
+    width: 800px;
+    height: 600px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 50px;
     margin: 0 auto;
-    h1 {
+}
+
+.header {
     text-align: center;
-    font-family: fantasy;
-    font-size: 75px;
-    margin-top: 0px;
 }
+
+.button {
+    display: inline-block;
+    cursor: pointer;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    background: #3498db;
+    padding: 5px 10px 5px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
 }
+   
+.messagecontainer {
+    margin-top: 10px;
+    width: 670px;
+    float: right;
+
+}
+
+.messagecontainer .taskName {
+    display: inline-block;
+    width: 400px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+ 
+
+
+
+
