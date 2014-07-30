@@ -9,10 +9,15 @@ body {
 
 .topheader {
     color: white;
-    font-size: 60px;
+    //font-size: 60px;
     margin-bottom: 10px;
     margin-top: 15px;
     text-align:center;
+    span {
+        font-size: 80px;
+        font-family: fantasy;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2d95, 0 0 30px #ff2d95, 0 0 40px #ff2d95, 0 0 50px #ff2d95, 0 0 75px #ff2d95;
+    }
 }
 
 .newItem {
@@ -20,17 +25,22 @@ body {
     height: 50px;
     font-size: 20px;
     margin-bottom: 20px;
+    position: relative;
+    bottom: 18px;
 
 }
 
 .taskBox {
-    width: 800px;
-    height: 600px;
-    background-image: url(http://webhund.com/RHJC/graphics/background-plain-graphic.jpg);
+    width: 690px;
+    height: 500px;
+    //background-image: url(http://webhund.com/RHJC/graphics/background-plain-graphic.jpg);
+    background-color: black;
     border-radius: 10px;
     margin-top: 50px;
     margin: 0 auto;
     overflow: scroll;
+    border: 2px solid white;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2d95, 0 0 30px #ff2d95, 0 0 40px #ff2d95, 0 0 50px #ff2d95, 0 0 75px #ff2d95;
 }
 
 .header {
@@ -39,18 +49,51 @@ body {
 
 .button {
     display: inline-block;
-    cursor: pointer;
-    height: 30px;
-    width: 100px;
-    text-align: center;
-    background: #CC6600;
-    border: 2px solid black;
-    border-radius: 6px;
-    padding: 5px 10px 5px;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
+    box-shadow:inset 0px 1px 9px 1px #e6cafc;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c579ff), color-stop(1, #a341ee) );
+    background:-moz-linear-gradient( center top, #c579ff 5%, #a341ee 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c579ff', endColorstr='#a341ee');
+    background-color:#c579ff;
+    -webkit-border-top-left-radius:6px;
+    -moz-border-radius-topleft:6px;
+    border-top-left-radius:6px;
+    -webkit-border-top-right-radius:6px;
+    -moz-border-radius-topright:6px;
+    border-top-right-radius:6px;
+    -webkit-border-bottom-right-radius:6px;
+    -moz-border-radius-bottomright:6px;
+    border-bottom-right-radius:6px;
+    -webkit-border-bottom-left-radius:6px;
+    -moz-border-radius-bottomleft:6px;
+    border-bottom-left-radius:6px;
+    text-indent:0;
+    border:2px solid #a946f5;
+    display:inline-block;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    font-style:normal;
+    height:35px;
+    line-height:35px;
+    width:100px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 0px #8628ce;
+    margin-right: 20px;
     
+}
+
+.button:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a341ee), color-stop(1, #c579ff) );
+    background:-moz-linear-gradient( center top, #a341ee 5%, #c579ff 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a341ee', endColorstr='#c579ff');
+    background-color:#a341ee;
+}
+
+.button:active {
+    position: relative;
+    top: 1px;
 }
    
 .taskcontainer {
@@ -66,11 +109,60 @@ body {
     margin-top: 10px;
     font-size: 20px;
     font-weight: bold;
-    text-decoration: underline;
-    float: left;
     position: relative;
-    right: 90px;
+    color: white;
+    //right: 90px;
 }
+
+.submitTaskButton {
+     display: inline-block;
+     position: relative;
+    bottom: 20px;
+    left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow:inset 0px 1px 9px 1px #e6cafc;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c579ff), color-stop(1, #a341ee) );
+    background:-moz-linear-gradient( center top, #c579ff 5%, #a341ee 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c579ff', endColorstr='#a341ee');
+    background-color:#c579ff;
+    -webkit-border-top-left-radius:6px;
+    -moz-border-radius-topleft:6px;
+    border-top-left-radius:6px;
+    -webkit-border-top-right-radius:6px;
+    -moz-border-radius-topright:6px;
+    border-top-right-radius:6px;
+    -webkit-border-bottom-right-radius:6px;
+    -moz-border-radius-bottomright:6px;
+    border-bottom-right-radius:6px;
+    -webkit-border-bottom-left-radius:6px;
+    -moz-border-radius-bottomleft:6px;
+    border-bottom-left-radius:6px;
+    text-indent:0;
+    border:2px solid #a946f5;
+    display:inline-block;
+    color:#ffffff;
+    font-family:Arial;
+    font-weight:bold;
+    font-style:normal;
+    height:45px;
+    line-height:45px;
+    width:100px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 0px #8628ce;
+    margin-right: 20px;
+   
+}
+
+.submitTaskButton:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a341ee), color-stop(1, #c579ff) );
+    background:-moz-linear-gradient( center top, #a341ee 5%, #c579ff 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a341ee', endColorstr='#c579ff');
+    background-color:#a341ee;
+}
+
+
 
  
 
